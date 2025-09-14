@@ -1,0 +1,8 @@
+<div class="camera-container">
+  <video #video autoplay playsinline class="video-preview"></video>
+  <button mat-raised-button color="primary" (click)="capturePhoto()" [disabled]="isCapturing">
+    <mat-icon>camera_alt</mat-icon> Escanear
+  </button>
+  <mat-spinner *ngIf="isCapturing" diameter="50"></mat-spinner>
+  <canvas #canvas style="display: none;"></canvas>
+</div>
